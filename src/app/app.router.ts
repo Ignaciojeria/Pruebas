@@ -5,6 +5,8 @@ import{AppComponent} from './app.component';
 import { LoginComponent } from './login/login.component';
 
 export const ROUTER: Routes= [
+//login es una de las rutas del enrutador del componente appComponent
+// y este se visualiza en <router-outlet></router-outlet>
 {path:'', redirectTo:'/login', pathMatch:'full'},
 {path:'login', component:LoginComponent},
 //El modulo de suite tiene su propio enrutamiento.
