@@ -1,0 +1,17 @@
+<div  id="login-cover">
+        <div style="height:222px; width:384px;">
+         <img src="./assets/logo-procanchas.svg" alt=""> 
+
+         <form [formGroup]="loginVmFormGroup" >
+         <mat-form-field style="width:100%;">
+                <input matInput type="text" name="name" style="color:white" formControlName="email" >
+                <mat-placeholder style="color:white">Usuario</mat-placeholder>
+              </mat-form-field>
+              <mat-form-field style="width:100%">
+                    <input matInput type="password" name="name" formControlName="password" >
+                    <mat-placeholder style="color:white; ">Contraseña</mat-placeholder>
+                  </mat-form-field>
+                  <button mat-raised-button style="width:100%" color="warn" (click)="login()" > Ingresar </button>
+                </form>
+        </div>
+      </div>

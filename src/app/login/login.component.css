@@ -1,0 +1,23 @@
+#login-cover {
+    /* añadimos propiedad flex para posicionar el login box al centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;        /* for single line flex container */
+    align-content: center;      /* for multi-line flex container */
+    /* The image used */
+    background-image: linear-gradient(rgba(25, 43, 48,0.5),rgba(25, 43, 48,0.5)), url("../../assets/cover.jpeg");
+    /* Full height */
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login-box{
+    background-color:red; height:240px; width:480px;
+}
+
+.mat-input-underline {
+    background-color: white;    /* replace this color with your accent color hex code */
+}
