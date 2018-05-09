@@ -1,2 +1,17 @@
-<h1>SUITE WORKS</h1>
-<router-outlet></router-outlet>
+<!--Dentro de esta lamina vamos a ubicar los componentes de material.ui -->
+
+    <mat-drawer-container  id="lamina-suite">
+        <mat-drawer id="side-bar" mode="side" opened="true" style="background-color:#2d323e;">
+          <!--Inicio Contenido izquierdo -->
+          <mat-card class="example-card"style="height:100px;" >
+         Acá iría la imagen de bienvenido.
+          </mat-card>
+          
+       <!--fin Contenido Izquierdo -->
+        </mat-drawer>
+        <mat-drawer-content>
+<!-- Inicio Contenido Principal-->
+          <router-outlet></router-outlet>
+          <!-- Fin Contenido Principal-->
+        </mat-drawer-content>
+      </mat-drawer-container>

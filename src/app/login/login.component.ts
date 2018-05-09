@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../service/login.service';
 import {LoginVm} from '../model/LoginVm'
 import{FormBuilder,FormGroup,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   private loginVmFormGroup:FormGroup;
 
-  constructor(private loginService:LoginService,private fb:FormBuilder ) { 
+  constructor(private loginService:LoginService,private fb:FormBuilder,private router:Router ) { 
     
     this.loginVmFormGroup=fb.group({
       email:'',
@@ -28,7 +29,9 @@ export class LoginComponent implements OnInit {
     let loginVm:LoginVm=this.loginVmFormGroup.getRawValue();
     this.loginService.login(loginVm).subscribe(rs=> {console.log("Solicitud aceptada");
       console.log(rs);
-      this.loggedIn=true;},
+      this.loggedIn=true;
+      this.router.navigate(['suite/inicio']);
+    },
 err=> {console.log(err); console.log("Solicitud errada");});
   }
 

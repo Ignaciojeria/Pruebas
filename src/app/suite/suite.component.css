@@ -1,0 +1,8 @@
+#lamina-suite {
+    height: 100vh;
+}
+
+#side-bar{
+    /* añadimos propiedad flex para posicionar el login box al centro */
+    display: flex;
+}
